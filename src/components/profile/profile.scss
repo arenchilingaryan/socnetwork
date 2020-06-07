@@ -1,0 +1,12 @@
+@import '../UI/style.scss';
+
+.profile__wrapper {
+    background: $pink;
+}
+.profile__container {
+    width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+    background: $white;
+    color: black;
+}
