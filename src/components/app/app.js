@@ -2,8 +2,12 @@ import React from 'react'
 import { useAuth } from '../../hooks/auth-hook'
 import { AuthContext } from '../../context/auth-context'
 import { useRoutes } from '../routes/routes'
+import { connect } from 'react-redux'
+import { toggleMenu } from '../../redux/reducers/menu.reducer'
+import Menu from '../menu/menu'
+import './app.scss'
 
-function App() {
+function App(props) {
 
     const { token, login, logout, userId, email, userName } = useAuth()
 
@@ -15,11 +19,25 @@ function App() {
         <AuthContext.Provider value={{
             token, userId, email, login, logout, userName, isAuthenticated
           }}>
-            <div className="App">
+            <Menu />
+            <div className={ props.menu ? "App App__menu" : "App" }>
+            <button onClick={props.toggleMenuBar} className="menu__btn">Menu</button>
                 { routes }
             </div>
         </AuthContext.Provider>
     )
 }
 
-export default App;
+function mapStateToProps(state) {
+    return {
+        menu: state.menu.menu
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        toggleMenuBar: () => dispatch(toggleMenu())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

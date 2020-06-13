@@ -1,6 +1,7 @@
 import React from 'react'
 import AuthRoutes from './routes-auth'
 import UnAuthRoutes from './routes-unAuth'
+import './routes.scss'
 
 
 

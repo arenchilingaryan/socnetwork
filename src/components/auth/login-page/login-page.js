@@ -28,7 +28,6 @@ const LoginPage = () => {
         if (data) {
             clearError()
             auth.login(data.token, data.userId, data.email)
-            history.push('/profile')
         }
     }
 

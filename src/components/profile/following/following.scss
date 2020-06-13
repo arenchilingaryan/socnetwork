@@ -1,0 +1,24 @@
+@import '../../UI//style.scss';
+
+.profile__following {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.following__item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    .following__item-img {
+        width: 50px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+    .following__item-name {
+        font-size: 14px;
+    }
+}
