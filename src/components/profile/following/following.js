@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import DefaultUser from '../../../img/defaultUser.jpg'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { useHttp } from '../../../hooks/http-hook'
 import { useAuth } from '../../../hooks/auth-hook'
 import { connect } from 'react-redux'
@@ -13,6 +13,7 @@ function Following(props) {
     const { id } = useParams()
     const { request, loading } = useHttp()
     const auth = useAuth()
+    const history = useHistory()
 
     async function unfollowHandler(id) {
         try {
@@ -37,6 +38,10 @@ function Following(props) {
         }
     }, [auth.userId])
 
+    const loadUser = (id) => {
+        history.push(`/profile/${id}`)
+    }
+
 
     return (
         <div className="profile__following">
@@ -47,10 +52,11 @@ function Following(props) {
                         return (
                             <div className="following__item">
                                 <img
+                                    onClick={() => loadUser(el.id)}
                                     className="following__item-img"
                                     src={el.img ? `data:image/png;base64,${el.img}` : DefaultUser} alt="sorry bro :'("
                                 />
-                                <span className="following__item-name"> {el.userName} </span>
+                                <span className="following__item-name"> {el.userName ? el.userName : 'USER'} </span>
                                 <button onClick={() => unfollowHandler(el.id)} className="following__unfollow-btn">Unfollow</button>
                             </div>
                         )

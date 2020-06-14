@@ -3,6 +3,7 @@
 .profile__following {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 20px;
 }
 
 .following__item {
@@ -18,6 +19,7 @@
         height: 50px;
         margin-bottom: 10px;
         border-radius: 50%;
+        cursor: pointer;
     }
     .following__item-name {
         font-size: 14px;

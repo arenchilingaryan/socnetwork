@@ -17,8 +17,17 @@
         width: 50px;
         margin-bottom: 10px;
         border-radius: 50%;
+        cursor: pointer;
     }
     .followers__item-name {
         font-size: 14px;
     }
+}
+.followers__null {
+    width: 500px;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: $purple;
 }
