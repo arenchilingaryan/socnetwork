@@ -9,7 +9,7 @@ import './app.scss'
 
 function App(props) {
 
-    const { token, login, logout, userId, email, userName } = useAuth()
+    const { token, login, logout, userId, email } = useAuth()
 
     const isAuthenticated = !!token
   
@@ -17,7 +17,7 @@ function App(props) {
 
     return (
         <AuthContext.Provider value={{
-            token, userId, email, login, logout, userName, isAuthenticated
+            token, userId, email, login, logout, isAuthenticated
           }}>
             <Menu />
             <div className={ props.menu ? "App App__menu" : "App" }>

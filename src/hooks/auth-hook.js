@@ -6,20 +6,17 @@ export const useAuth = () => {
     const [token, setToken] = useState(null)
     const [userId, setUserId] = useState(null)
     const [email, setEmail] = useState(null)
-    const [userName, setUserName] = useState(null)
 
 
-    const login = useCallback((jwtToken, id, userEmail, userName) => {
+    const login = useCallback((jwtToken, id, userEmail) => {
         // Set data of login-button for drop to state and localstore
         setToken(jwtToken)
         setUserId(id)
         setEmail(userEmail)
-        setUserName(userName)
         localStorage.setItem(storageName, JSON.stringify({
             userId: id, 
             token: jwtToken, 
-            email: userEmail, 
-            userName: userName
+            email: userEmail
         }))
     }, [])
     const logout = useCallback(() => {
@@ -27,18 +24,17 @@ export const useAuth = () => {
         setToken(null)
         setUserId(null)
         setEmail(null)
-        setUserName(null)
         localStorage.removeItem(storageName)
+        window.location.reload()
     }, [])
 
     useEffect(() => {
         // Add data of localstore to auth-context
         const data = JSON.parse(localStorage.getItem(storageName))
+        window.data = data
         if (data && data.token) {
-            login(data.token, data.userId, data.email, data.userName)
+            login(data.token, data.userId, data.email)
         }
     }, [login])
 
-    return { login, logout, token, userId, email, userName }
-
-}
+    return { login, logout, token, userId, email }}

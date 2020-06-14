@@ -10,7 +10,7 @@ export const useHttp = () => {
 
     
 
-    const request = useCallback(async (url, method = 'GET', body = null, isAuth ) => {
+    const request = useCallback(async (url, method = 'GET', body = null, isAuth = false ) => {
 
         let headers = {}
 

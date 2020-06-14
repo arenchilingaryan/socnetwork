@@ -6,42 +6,70 @@ import { useAuth } from '../../../hooks/auth-hook'
 import { connect } from 'react-redux'
 import { setProfileData } from '../../../redux/reducers/profile.reducer'
 import './following.scss'
+import { setMyProfileData } from '../../../redux/reducers/my.profile.reducer'
+import Spinner from '../../spinner/spinner'
 
 function Following(props) {
     const { id } = useParams()
-    const { request } = useHttp()
+    const { request, loading } = useHttp()
     const auth = useAuth()
+
+    async function unfollowHandler(id) {
+        try {
+            await request('/api/useraction/unfollow', 'POST', { userId: id, myId: auth.userId }, true)
+            const data = await request('/api/profile/getinfo', 'POST', { userId: auth.userId }, true)
+            props.setMyProfile(data.user)
+            props.setProfile(data.user)
+        } catch (e) {
+            throw new Error(e)
+        }
+    }
 
     useEffect(() => {
         if (!id) {
             if (auth.userId) {
-                request('/api/profile/getinfo', 'POST', {userId: auth.userId}, true)
-                .then(data => props.setProfile(data.user))
+                request('/api/profile/getinfo', 'POST', { userId: auth.userId }, true)
+                    .then(data => props.setProfile(data.user))
             }
         } else {
-            request('/api/profile/getinfo', 'POST', {userId: id}, false)
-            .then(data => props.setProfile(data.user))
+            request('/api/profile/getinfo', 'POST', { userId: id }, false)
+                .then(data => props.setProfile(data.user))
         }
     }, [auth.userId])
+
+
     return (
         <div className="profile__following">
-            <div className="following__item">
-                <img className="following__item-img" src={DefaultUser} alt="sorry bro :'("/>
-                <span className="following__item-name">USERNAME</span>
-                <button>Unfollow</button>
-            </div>
+            {
+                loading
+                    ? <Spinner />
+                    : props.myProfile.following.map(el => {
+                        return (
+                            <div className="following__item">
+                                <img
+                                    className="following__item-img"
+                                    src={el.img ? `data:image/png;base64,${el.img}` : DefaultUser} alt="sorry bro :'("
+                                />
+                                <span className="following__item-name"> {el.userName} </span>
+                                <button onClick={() => unfollowHandler(el.id)} className="following__unfollow-btn">Unfollow</button>
+                            </div>
+                        )
+                    })
+            }
         </div>
     )
 }
 
 function mapStateToProps(state) {
     return {
-        profile: state.profile
+        profile: state.profile,
+        myProfile: state.myProfile
     }
 }
 function mapDispatchToProps(dispatch) {
     return {
-        setProfile: (data) => dispatch(setProfileData(data))
+        setProfile: (data) => dispatch(setProfileData(data)),
+        setMyProfile: (data) => dispatch(setMyProfileData(data))
     }
 }
 

@@ -10,8 +10,8 @@ const LoginPage = () => {
         email: '',
         password: ''
     })
-    const history = useHistory()
     const auth = useContext(AuthContext)
+    const history = useHistory()
 
     const { request, loading, error, clearError } = useHttp()
 
@@ -28,6 +28,8 @@ const LoginPage = () => {
         if (data) {
             clearError()
             auth.login(data.token, data.userId, data.email)
+            history.push('/profile')
+            window.location.reload()
         }
     }
 

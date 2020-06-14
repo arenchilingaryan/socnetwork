@@ -15,7 +15,6 @@ function Menu(props) {
         props.toggleMenuBar()
         history.push('/login')
     }
-    
     return (
         <div className="menuBar" style={props.menu ? { display: 'block' } : { display: 'none' }}>
             <button onClick={props.toggleMenuBar} className="menu__btn">Menu</button>
@@ -41,11 +40,11 @@ function Menu(props) {
                         <FontAwesomeIcon className="menu__icon-hide" icon={faIdCardAlt} />
                     </div>
                 </NavLink>
-                <div onClick={logoutHandler} className="menu__icon-container">
+                <button onClick={logoutHandler} className="menu__icon-container">
                     <FontAwesomeIcon className="menu__icon" icon={faSignOutAlt} />
                     <span className="menu__icon-desc">Sign Out</span>
                     <FontAwesomeIcon className="menu__icon-hide" icon={faSignOutAlt} />
-                </div>
+                </button>
             </div>
         </div>
     )

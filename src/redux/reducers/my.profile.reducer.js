@@ -15,16 +15,12 @@ const initialState = {
     dialogs: []
 }
 
-export const setProfileData = (data) => ({ type: 'SET_PROFILE_DATA', data })
-export const updateProfileData = (form) => ({ type: 'UPDATE_PROFILE_DATA', form })
-export const updateProfileImg = (img) => ({ type: 'UPDATE_PROFILE_IMG', img })
+export const setMyProfileData = (data) => ({ type: 'SET_MY_PROFILE_DATA', data })
 
 
-export default function profileReducer(state = initialState, action) {
+export default function myProfileReducer(state = initialState, action) {
     switch (action.type) {
-        case 'TOGGLE_PROFILE_EDIT':
-            return { ...state, edit: !state.edit }
-        case 'SET_PROFILE_DATA': {
+        case 'SET_MY_PROFILE_DATA': {
             const { userId, birthday, email, about, age, userName, img, firstName, lastName, followers, following, dialogs } = action.data
             return {
                 ...state,
@@ -42,20 +38,6 @@ export default function profileReducer(state = initialState, action) {
                 dialogs
             }
         }
-        case 'UPDATE_PROFILE_DATA': {
-            const { birthday, about, age, userName } = action.form
-            return {
-                ...state,
-                userName,
-                birthday,
-                about,
-                age
-            }
-        }
-        case 'UPDATE_PROFILE_IMG': {
-            return { ...state, img: action.img }
-        }
-
         default: return state
     }
 }
