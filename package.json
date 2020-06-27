@@ -2,6 +2,7 @@
   "name": "sn",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://obscure-dusk-00211.herokuapp.com/",
   "homepage": "https://arenchilingaryan.github.io/sn-client",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
@@ -32,7 +33,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "https://obscure-dusk-00211.herokuapp.com/",
   "browserslist": {
     "production": [
       ">0.2%",
