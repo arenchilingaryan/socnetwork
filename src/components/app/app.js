@@ -7,6 +7,8 @@ import { toggleMenu } from '../../redux/reducers/menu.reducer'
 import Menu from '../menu/menu'
 import './app.scss'
 
+export const URL = 'https://obscure-dusk-00211.herokuapp.com/'
+
 function App(props) {
 
     const { token, login, logout, userId, email } = useAuth()

@@ -3,6 +3,7 @@ import Spinner from '../../spinner/spinner'
 import { useHttp } from '../../../hooks/http-hook'
 import { useHistory } from 'react-router-dom'
 import { AuthContext } from '../../../context/auth-context'
+import { URL } from '../../app/app'
 import './login-page.scss'
 
 const LoginPage = () => {
@@ -24,7 +25,7 @@ const LoginPage = () => {
 
     const loginHandler = async (event) => {
         event.preventDefault()
-        const data = await request('/api/auth/login', 'POST', form, false)
+        const data = await request(`${URL}/api/auth/login`, 'POST', form, false)
         if (data) {
             clearError()
             auth.login(data.token, data.userId, data.email)

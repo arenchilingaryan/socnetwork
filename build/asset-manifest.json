@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/sn-client/static/css/main.dbfbce85.chunk.css",
-    "main.js": "/sn-client/static/js/main.a9e61205.chunk.js",
-    "main.js.map": "/sn-client/static/js/main.a9e61205.chunk.js.map",
-    "runtime-main.js": "/sn-client/static/js/runtime-main.a946b1c1.js",
-    "runtime-main.js.map": "/sn-client/static/js/runtime-main.a946b1c1.js.map",
-    "static/js/2.1884a721.chunk.js": "/sn-client/static/js/2.1884a721.chunk.js",
-    "static/js/2.1884a721.chunk.js.map": "/sn-client/static/js/2.1884a721.chunk.js.map",
-    "index.html": "/sn-client/index.html",
-    "precache-manifest.928f33637eb059e90fae8a4c7998fd41.js": "/sn-client/precache-manifest.928f33637eb059e90fae8a4c7998fd41.js",
-    "service-worker.js": "/sn-client/service-worker.js",
-    "static/css/main.dbfbce85.chunk.css.map": "/sn-client/static/css/main.dbfbce85.chunk.css.map",
-    "static/js/2.1884a721.chunk.js.LICENSE.txt": "/sn-client/static/js/2.1884a721.chunk.js.LICENSE.txt",
-    "static/media/menu.scss": "/sn-client/static/media/bgmenu.37ccf83b.jpeg",
-    "static/media/defaultUser.jpg": "/sn-client/static/media/defaultUser.bff3404e.jpg"
+    "main.css": "/socnetwork/static/css/main.503b3f31.chunk.css",
+    "main.js": "/socnetwork/static/js/main.76918ea1.chunk.js",
+    "main.js.map": "/socnetwork/static/js/main.76918ea1.chunk.js.map",
+    "runtime-main.js": "/socnetwork/static/js/runtime-main.7bd589f7.js",
+    "runtime-main.js.map": "/socnetwork/static/js/runtime-main.7bd589f7.js.map",
+    "static/js/2.a3ed275f.chunk.js": "/socnetwork/static/js/2.a3ed275f.chunk.js",
+    "static/js/2.a3ed275f.chunk.js.map": "/socnetwork/static/js/2.a3ed275f.chunk.js.map",
+    "index.html": "/socnetwork/index.html",
+    "precache-manifest.2e8dee8251fb17616e52ec7946353568.js": "/socnetwork/precache-manifest.2e8dee8251fb17616e52ec7946353568.js",
+    "service-worker.js": "/socnetwork/service-worker.js",
+    "static/css/main.503b3f31.chunk.css.map": "/socnetwork/static/css/main.503b3f31.chunk.css.map",
+    "static/js/2.a3ed275f.chunk.js.LICENSE.txt": "/socnetwork/static/js/2.a3ed275f.chunk.js.LICENSE.txt",
+    "static/media/menu.scss": "/socnetwork/static/media/bgmenu.37ccf83b.jpeg",
+    "static/media/defaultUser.jpg": "/socnetwork/static/media/defaultUser.bff3404e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a946b1c1.js",
-    "static/js/2.1884a721.chunk.js",
-    "static/css/main.dbfbce85.chunk.css",
-    "static/js/main.a9e61205.chunk.js"
+    "static/js/runtime-main.7bd589f7.js",
+    "static/js/2.a3ed275f.chunk.js",
+    "static/css/main.503b3f31.chunk.css",
+    "static/js/main.76918ea1.chunk.js"
   ]
 }
