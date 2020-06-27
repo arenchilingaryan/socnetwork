@@ -35,6 +35,11 @@
         cursor: pointer;
         color: #ccc;
     }
+    .profile__messageIcon {
+        font-size: 25px;
+        margin-left: 100px;
+        cursor: pointer;
+    }
 }
 .profile__image-upload {
     display: none;
@@ -74,4 +79,48 @@
         text-decoration: none;
         color: $black;
     }
+}
+
+.profile__modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .7);
+    .profile__modal-inside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+    }
+}
+.profile__modal-input {
+    width: 200px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid $pink;
+    border-radius: 10px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    color: $white;
+}
+.profile__modal-btns {
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.profile__modal-btn {
+    @include button;
+    width: 70px;
+    height: 35px;
 }

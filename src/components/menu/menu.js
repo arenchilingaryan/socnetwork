@@ -9,11 +9,9 @@ import { useAuth } from '../../hooks/auth-hook'
 
 function Menu(props) {
     const auth = useAuth()
-    const history = useHistory()
     const logoutHandler = () => {
         auth.logout()
         props.toggleMenuBar()
-        history.push('/login')
     }
     return (
         <div className="menuBar" style={props.menu ? { display: 'block' } : { display: 'none' }}>

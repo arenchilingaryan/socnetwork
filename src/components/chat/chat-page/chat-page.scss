@@ -1,0 +1,106 @@
+@import '../../UI/style.scss';
+
+
+.messages__chat {
+  padding: 0 20px;
+  width: 100%;
+  .message__chat-name {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .chatMessages {
+    padding: 20px;
+    min-height: 50vh;
+    max-height: 50vh;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.messages__chat-item {
+  display: flex;
+  align-items: center;
+}
+.messages__chat-item-me {
+  display: flex;
+  align-items: center;
+}
+
+.messages__item-message {
+  position: relative;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.messages__chat-msg {
+  border: 1px solid black;
+  position: relative;
+  border-radius: 20px;
+  padding: 15px;
+  margin-left: 30px;
+}
+.messages__chat-msg:before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  border: 1px solid $black;
+  width: 15px;
+  height: 15px;
+  background: $white;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  transform: rotate(46deg);
+}
+.messages__chat-msg-me {
+  border: 1px solid black;
+  position: relative;
+  border-radius: 20px;
+  padding: 15px;
+  margin-left: 30px;
+}
+.messages__item-message-me {
+  position: relative;
+  width: 30%;
+  list-style-type: none;
+  margin-bottom: 15px;
+  margin-left: 400px;
+}
+.messages__item-message-me:before {
+  position: absolute;
+  content: "";
+  right: -7px;
+  top: 15px;
+  border: 1px solid $black;
+  width: 15px;
+  height: 15px;
+  background: $white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(43deg);
+  z-index: 10;
+}
+.messages__img-me {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  right: -100px;
+}
+.messages__sendInput {
+  width: 600px;
+  padding: 0px 20px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border: 1px solid $black;
+  border-radius: 5px;
+}
+.messages__chat-btn {
+  @include button;
+  width: 70px;
+  height: 30px;
+  margin-left: 20px;
+}

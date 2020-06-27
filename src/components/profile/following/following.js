@@ -5,9 +5,9 @@ import { useHttp } from '../../../hooks/http-hook'
 import { useAuth } from '../../../hooks/auth-hook'
 import { connect } from 'react-redux'
 import { setProfileData } from '../../../redux/reducers/profile.reducer'
-import './following.scss'
 import { setMyProfileData } from '../../../redux/reducers/my.profile.reducer'
 import Spinner from '../../spinner/spinner'
+import './following.scss'
 
 function Following(props) {
     const { id } = useParams()
@@ -50,7 +50,7 @@ function Following(props) {
                     ? <Spinner />
                     : props.myProfile.following.map(el => {
                         return (
-                            <div className="following__item">
+                            <div key={el.id} className="following__item">
                                 <img
                                     onClick={() => loadUser(el.id)}
                                     className="following__item-img"
