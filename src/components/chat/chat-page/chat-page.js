@@ -7,7 +7,7 @@ import io from 'socket.io-client'
 import './chat-page.scss'
 
 
-const socket = io('http://localhost:5000')
+const socket = io('https://obscure-dusk-00211.herokuapp.com/')
 
 
 function ChatPage(props) {
