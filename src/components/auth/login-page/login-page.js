@@ -25,7 +25,7 @@ const LoginPage = () => {
 
     const loginHandler = async (event) => {
         event.preventDefault()
-        const data = await request(`${URL}/api/auth/login`, 'POST', form, false)
+        const data = await request(`https://obscure-dusk-00211.herokuapp.com//api/auth/login`, 'POST', form, false)
         if (data) {
             clearError()
             auth.login(data.token, data.userId, data.email)
