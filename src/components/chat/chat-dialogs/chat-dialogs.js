@@ -7,7 +7,7 @@ import io from 'socket.io-client'
 import Spinner from '../../spinner/spinner'
 import { useHistory } from 'react-router-dom'
 
-const socket = io('http://localhost:5000')
+const socket = io('https://obscure-dusk-00211.herokuapp.com/')
 
 function ChatDialogs(props) {
   const { request, loading } = useHttp()
