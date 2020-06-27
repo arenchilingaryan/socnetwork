@@ -2,7 +2,7 @@
   "name": "sn",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://arenchilingaryan.github.io/cn-client",
+  "homepage": "https://arenchilingaryan.github.io/sn-client",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
