@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/socnetwork/static/css/main.503b3f31.chunk.css",
-    "main.js": "/socnetwork/static/js/main.9d21e3d6.chunk.js",
-    "main.js.map": "/socnetwork/static/js/main.9d21e3d6.chunk.js.map",
+    "main.js": "/socnetwork/static/js/main.fe969dda.chunk.js",
+    "main.js.map": "/socnetwork/static/js/main.fe969dda.chunk.js.map",
     "runtime-main.js": "/socnetwork/static/js/runtime-main.7bd589f7.js",
     "runtime-main.js.map": "/socnetwork/static/js/runtime-main.7bd589f7.js.map",
     "static/js/2.a3ed275f.chunk.js": "/socnetwork/static/js/2.a3ed275f.chunk.js",
     "static/js/2.a3ed275f.chunk.js.map": "/socnetwork/static/js/2.a3ed275f.chunk.js.map",
     "index.html": "/socnetwork/index.html",
-    "precache-manifest.19d318d07504d7c95c9dd88f8d4aa93a.js": "/socnetwork/precache-manifest.19d318d07504d7c95c9dd88f8d4aa93a.js",
+    "precache-manifest.3fb974422327a883d7a7247118c0d93f.js": "/socnetwork/precache-manifest.3fb974422327a883d7a7247118c0d93f.js",
     "service-worker.js": "/socnetwork/service-worker.js",
     "static/css/main.503b3f31.chunk.css.map": "/socnetwork/static/css/main.503b3f31.chunk.css.map",
     "static/js/2.a3ed275f.chunk.js.LICENSE.txt": "/socnetwork/static/js/2.a3ed275f.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.7bd589f7.js",
     "static/js/2.a3ed275f.chunk.js",
     "static/css/main.503b3f31.chunk.css",
-    "static/js/main.9d21e3d6.chunk.js"
+    "static/js/main.fe969dda.chunk.js"
   ]
 }
